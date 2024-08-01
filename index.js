@@ -1,7 +1,7 @@
 import express from 'express'
 const app = express()
 
-const port = 8080
+const port = process.env || 4000
 
 app.set('view engine', 'ejs')
 
@@ -17,5 +17,5 @@ app.get('/contact',(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log('loacalhost:8080')
+    console.log('loacalhost: '+ port)
 })
