@@ -1,7 +1,7 @@
 import express from 'express'
 const app = express()
 
-const port = process.env || 4000
+const port = 8080
 
 app.set('view engine', 'ejs')
 
