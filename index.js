@@ -1,9 +1,18 @@
 import express from 'express'
+
+import profile from './route/profile.js'
 const app = express()
 
 const port = 8080
 
 app.set('view engine', 'ejs')
+
+app.use(express.static('public'))
+app.use(express.static('src'))
+app.use(express.json())
+app.use(express.urlencoded({ extended :true }))
+
+app.use('/profile',profile)
 
 app.get('/',(req,res)=>{
     res.redirect('home')
@@ -12,10 +21,6 @@ app.get('/',(req,res)=>{
 app.get('/home',(req,res)=>{
     res.render('home')
 })
-app.get('/contact',(req,res)=>{
-    res.render('cotact')
-})
-
 app.listen(port,()=>{
     console.log('loacalhost: '+ port)
 })

@@ -1,0 +1,114 @@
+@import url("https://css.gg/css");
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+:root{
+    --radius-img:130px;
+    --wh-contact:40px;
+}
+body , a-side, contact, contact a{display: flex;}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #dcd3f4;
+    /* padding: 0 20px 0 20px; */
+    /* flex-wrap: wrap; */
+    /* gap: 2px; */
+}
+
+a-side{
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 25%;
+    height: 100%;
+    padding: 2em  0 0 0;
+    /* background: red; */
+    img{
+        width: var(--radius-img);
+        height: var(--radius-img);
+        border-radius: 50%;
+        background: green;
+    }
+    p{
+        margin: 20px;
+        font-size: 1.6em;
+        color: #747cc7;
+    }
+    contact{
+        margin: 10px 0 0 0;
+        flex-direction: row;
+        a{  
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px 0 10px ;
+            width: var(--wh-contact);
+            height: var(--wh-contact);
+            border-radius: 50%;
+            background: #fff;
+            transition: .2s linear;
+            color: #747cc7;
+        }
+        a:hover{
+            background: rgb(172, 172, 172);
+        }
+        i{
+            scale: .9;
+        }
+        .x-twitter{
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    }
+    .about{
+        position: relative;
+        width: 70%;
+        margin: 20px 0 0 0 ;
+        padding: 20px;
+        background:#fff;
+        border-radius: 20px;
+        color: #747cc7;
+        font-weight: bold;
+    }
+}
+main{
+
+    nav , nav a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    position: relative;
+    width:calc(75% - 30px);
+    /* background: green; */
+    margin: 0 30px 0 0;
+    --h-nav:13%;
+    nav{
+        position: relative;
+        width: 100%;
+        height: var(--h-nav);
+        justify-content: space-between;
+        /* background:red; */
+        a{
+            width: auto;
+            height: 50px;
+            background: #fff;
+            border-radius: 10px;
+            i , p{
+                margin: 0 12px 0 12px;
+            }
+        }
+    }
+    container{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: calc(100% - var(--h-nav));
+        background: #fff;
+    }
+}
