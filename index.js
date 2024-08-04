@@ -1,5 +1,5 @@
 import express from 'express'
-
+// import path from 'path'
 import profile from './route/profile.js'
 const app = express()
 
@@ -7,6 +7,7 @@ const port = 8080
 
 app.set('view engine', 'ejs')
 
+// app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'))
 app.use(express.static('src'))
 app.use(express.json())
